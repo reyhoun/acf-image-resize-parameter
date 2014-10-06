@@ -99,38 +99,38 @@ class acf_field_image_resize_parameter extends acf_field {
 
 
 		acf_render_field_setting( $field, array(
-            'label'         => __('Display "Resize Image"','acf-background'),
+            'label'         => __('Display "Resize Image"','acf-image-resize-parameter'),
 			'instructions'	=> __('Display "Resize Image" to user.','acf-image_resize_parameter'),
             'type'          => 'radio',
             'name'          => 'display_resize_image',
             'layout'  =>  'horizontal',
             'choices' =>  array(
-                1 => __('Yes', 'acf-background'),
-                0 => __('No', 'acf-background'),
+                1 => __('Yes', 'acf-image-resize-parameter'),
+                0 => __('No', 'acf-image-resize-parameter'),
             )
         ));
 		
 		acf_render_field_setting( $field, array(
-            'label'         => __('Resize Image','acf-background'),
+            'label'         => __('Resize Image','acf-image-resize-parameter'),
 			'instructions'	=> __('Enable/Disable Resize function.','acf-image_resize_parameter'),
             'type'          => 'radio',
             'name'          => 'resize_image',
             'layout'  =>  'horizontal',
             'choices' =>  array(
-                1 => __('Yes', 'acf-background'),
-                0 => __('No', 'acf-background'),
+                1 => __('Yes', 'acf-image-resize-parameter'),
+                0 => __('No', 'acf-image-resize-parameter'),
             )
         ));
 
 		acf_render_field_setting( $field, array(
-            'label'         => __('Crop Mode','acf-background'),
+            'label'         => __('Crop Mode','acf-image-resize-parameter'),
 			'instructions'	=> __('Enable/Disable Crop Mode. Note: if crop mode disable, height value was ignored.','acf-image_resize_parameter'),
             'type'          => 'radio',
             'name'          => 'crop_mode',
             'layout'  =>  'horizontal',
             'choices' =>  array(
-                1 => __('Yes', 'acf-background'),
-                0 => __('No', 'acf-background'),
+                1 => __('Yes', 'acf-image-resize-parameter'),
+                0 => __('No', 'acf-image-resize-parameter'),
             )
         ));
 
@@ -169,26 +169,26 @@ class acf_field_image_resize_parameter extends acf_field {
 		));
 
 		acf_render_field_setting( $field, array(
-            'label'         => __('Display "Show Default Image"','acf-background'),
+            'label'         => __('Display "Show Default Image"','acf-image-resize-parameter'),
 			'instructions'	=> __('Display "Show Default Image" to user.','acf-image_resize_parameter'),
             'type'          => 'radio',
             'name'          => 'display_default_image',
             'layout'  =>  'horizontal',
             'choices' =>  array(
-                1 => __('Yes', 'acf-background'),
-                0 => __('No', 'acf-background'),
+                1 => __('Yes', 'acf-image-resize-parameter'),
+                0 => __('No', 'acf-image-resize-parameter'),
             )
         ));
 
 		acf_render_field_setting( $field, array(
-            'label'         => __('Show Default Image','acf-background'),
+            'label'         => __('Show Default Image','acf-image-resize-parameter'),
 			'instructions'	=> __('Show default image when source image doesn\'t exist.','acf-image_resize_parameter'),
             'type'          => 'radio',
             'name'          => 'default_image',
             'layout'  =>  'horizontal',
             'choices' =>  array(
-                1 => __('Yes', 'acf-background'),
-                0 => __('No', 'acf-background'),
+                1 => __('Yes', 'acf-image-resize-parameter'),
+                0 => __('No', 'acf-image-resize-parameter'),
             )
         ));
 
@@ -246,82 +246,78 @@ class acf_field_image_resize_parameter extends acf_field {
 		*/
 
 
-		echo '<form>';
-
 		if ($field['display_resize_image']) {
-			echo '<label class="" for="' . $field['key'] . '">Resize Image</label>';
+			echo '<label class="" for="' . $field['key'] . '">' . __("Resize Image", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="">
-										<input type="radio" name="' . $field['name'] . '[resize_image]"'; if ($field['resize_image']) { echo 'checked';}  echo ' value="1">Yes<br>
-										<input type="radio" name="' . $field['name'] . '[resize_image]"'; if (!$field['resize_image']) { echo 'checked';} echo ' value="0">No
+										<input type="radio" name="' . $field['name'] . '[resize_image]"'; if ($field_value['resize_image']) { echo 'checked';}  echo ' value="1">' . __("Yes", "acf-image-resize-parameter") . '<br>
+										<input type="radio" name="' . $field['name'] . '[resize_image]"'; if (!$field_value['resize_image']) { echo 'checked';} echo ' value="0">' . __("No", "acf-image-resize-parameter") . '
 						</div>
 					</div>';
 		}
 
 
-		echo '<label class="" for="' . $field['key'] . '">Crop Mode</label>';
+		echo '<label class="" for="' . $field['key'] . '">' . __("Crop Mode", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="">
-										<input type="radio" name="' . $field['name'] . '[crop_mode]"'; if ($field['crop_mode']) { echo 'checked';}  echo ' value="1">Yes<br>
-										<input type="radio" name="' . $field['name'] . '[crop_mode]"'; if (!$field['crop_mode']) { echo 'checked';} echo ' value="0">No
+										<input type="radio" name="' . $field['name'] . '[crop_mode]"'; if ($field_value['crop_mode']) { echo 'checked';}  echo ' value="1">' . __("Yes", "acf-image-resize-parameter") . '<br>
+										<input type="radio" name="' . $field['name'] . '[crop_mode]"'; if (!$field_value['crop_mode']) { echo 'checked';} echo ' value="0">' . __("No", "acf-image-resize-parameter") . '
 						</div>
 					</div>';
 
 
-		echo '<label class="" for="' . $field['key'] . '">Width</label>';
+		echo '<label class="" for="' . $field['key'] . '">' . __("Width", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[width]" id="' . $field['key'] . 'line" value="' . $field_value['width'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[width]" id="' . $field['key'] . '-width" value="' . $field_value['width'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
 
-		echo '<label class="" for="' . $field['key'] . '">Height</label>';
+		echo '<label class="" for="' . $field['key'] . '">' . __("Height", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[height]" id="' . $field['key'] . 'line" value="' . $field_value['height'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[height]" id="' . $field['key'] . '-height" value="' . $field_value['height'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
 
-		echo '<label class="" for="' . $field['key'] . '">Mobile Width</label>';
+		echo '<label class="" for="' . $field['key'] . '">' . __("Mobile Width", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[mobile_width]" id="' . $field['key'] . 'line" value="' . $field_value['mobile_width'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[mobile_width]" id="' . $field['key'] . '-mobile-width" value="' . $field_value['mobile_width'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
 
-		echo '<label class="" for="' . $field['key'] . '">Mobile Height</label>';
+		echo '<label class="" for="' . $field['key'] . '">' . __("Mobile Height", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[mobile_height]" id="' . $field['key'] . 'line" value="' . $field_value['mobile_height'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[mobile_height]" id="' . $field['key'] . '-mobile-height" value="' . $field_value['mobile_height'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
 
 		if ($field['display_default_image']) {
-			echo '<label class="" for="' . $field['key'] . '">Show Default Image</label>';
+			echo '<label class="" for="' . $field['key'] . '">' . __("Show Default Image", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="">
-										<input type="radio" name="' . $field['name'] . '[default_image]"'; if ($field['default_image']) { echo 'checked';}  echo ' value="1">Yes<br>
-										<input type="radio" name="' . $field['name'] . '[default_image]"'; if (!$field['default_image']) { echo 'checked';} echo ' value="0">No
-									</form>										
+										<input type="radio" name="' . $field['name'] . '[default_image]"'; if ($field_value['default_image']) { echo 'checked';}  echo ' value="1">' . __("Yes", "acf-image-resize-parameter") . '<br>
+										<input type="radio" name="' . $field['name'] . '[default_image]"'; if (!$field_value['default_image']) { echo 'checked';} echo ' value="0">' . __("No", "acf-image-resize-parameter") . '
 						</div>
 					</div>';
 		}
-		echo '</form>';
 		
 
 
