@@ -237,7 +237,7 @@ class acf_field_image_resize_parameter extends acf_field {
 		$field_value = $field['value'];
 		
 		// echo '<pre>';
-		// 	print_r( $field);
+		// 	print_r( $field['value']);
 		// echo '</pre>';
 		
 		
@@ -308,15 +308,27 @@ class acf_field_image_resize_parameter extends acf_field {
 					</div>';
 
 
+		if ($field_value['default_image']) {
+			$set1 = 'checked';
+			$set2 = '';
+		} else {
+			$set1 = '';
+			$set2 = 'checked';
+		}
+		
+
+
 		if ($field['display_default_image']) {
 			echo '<label class="" for="' . $field['key'] . '">' . __("Show Default Image", "acf-image-resize-parameter") . '</label>';
 				echo '
 					<div class="">
 						<div class="">
-										<input type="radio" name="' . $field['name'] . '[default_image]"'; if ($field_value['default_image']) { echo 'checked';}  echo ' value="1">' . __("Yes", "acf-image-resize-parameter") . '<br>
-										<input type="radio" name="' . $field['name'] . '[default_image]"'; if (!$field_value['default_image']) { echo 'checked';} echo ' value="0">' . __("No", "acf-image-resize-parameter") . '
+										<input type="radio" name="' . $field['name'] . '[default_image]" ' . $set1 . ' value="1">' . __("Yes", "acf-image-resize-parameter") . '<br>
+										<input type="radio" name="' . $field['name'] . '[default_image]" ' . $set2 . ' value="0">' . __("No", "acf-image-resize-parameter") . '
 						</div>
 					</div>';
+		} else {
+			echo '<input type="hidden" name="' . $field['name'] . '[default_image]"  value="' . $field['default_image'] . '">' ;
 		}
 		
 
