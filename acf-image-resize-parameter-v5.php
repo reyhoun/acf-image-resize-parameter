@@ -237,7 +237,7 @@ class acf_field_image_resize_parameter extends acf_field {
 		$field_value = $field['value'];
 		
 		// echo '<pre>';
-		// 	print_r( $field['value']);
+		// 	var_dump( $field['value']);
 		// echo '</pre>';
 		
 		
@@ -273,7 +273,7 @@ class acf_field_image_resize_parameter extends acf_field {
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[width]" id="' . $field['key'] . '-width" value="' . $field_value['width'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[width]" id="' . $field['key'] . '-width" step="1" value="' . $field_value['width'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
@@ -283,7 +283,7 @@ class acf_field_image_resize_parameter extends acf_field {
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[height]" id="' . $field['key'] . '-height" value="' . $field_value['height'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[height]" id="' . $field['key'] . '-height" step="1" value="' . $field_value['height'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
@@ -293,7 +293,7 @@ class acf_field_image_resize_parameter extends acf_field {
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[mobile_width]" id="' . $field['key'] . '-mobile-width" value="' . $field_value['mobile_width'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[mobile_width]" id="' . $field['key'] . '-mobile-width"  step="1" value="' . $field_value['mobile_width'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
@@ -303,7 +303,7 @@ class acf_field_image_resize_parameter extends acf_field {
 					<div class="">
 						<div class="acf-input-append">px</div>
 						<div class="acf-input-wrap">
-							<input type="number" name="' . $field['name'] . '[mobile_height]" id="' . $field['key'] . '-mobile-height" value="' . $field_value['mobile_height'] . '" min="1" max="" step="any" placeholder="">
+							<input type="number" name="' . $field['name'] . '[mobile_height]" id="' . $field['key'] . '-mobile-height" step="1" value="' . $field_value['mobile_height'] . '" min="1" max="" step="any" placeholder="">
 						</div>
 					</div>';
 
@@ -537,15 +537,40 @@ class acf_field_image_resize_parameter extends acf_field {
 	*  @return	$value
 	*/
 	
-	/*
+	
 	
 	function update_value( $value, $post_id, $field ) {
+
+		if ($value['width'] == "") {
+			$value['width'] = null;
+		} else {
+			$value['width'] = (int)$value['width'];
+		}
+		
+		if ($value['height'] == "") {
+			$value['height'] = null;
+		} else {
+			$value['height'] = (int)$value['height'];
+		}
+		
+		if ($value['mobile_width'] == "") {
+			$value['mobile_width'] = null;
+		} else {
+			$value['mobile_width'] = (int)$value['mobile_width'];
+		}
+
+		if ($value['mobile_height'] == "") {
+			$value['mobile_height'] = null;
+		} else {
+			$value['mobile_height'] = (int)$value['mobile_height'];
+		}
+		
 		
 		return $value;
 		
 	}
 	
-	*/
+	
 	
 	
 	/*

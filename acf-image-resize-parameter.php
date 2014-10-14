@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Image Resize Parameter
 Plugin URI: https://github.com/reyhoun/acf-image-resize-parameter
 Description: Get Image Resize Parameter from user.
-Version: 1.0.0
+Version: 1.0.1
 Author: Reyhoun Team
 Author URI: http://reyhoun.com/
 License: GPLv2 or later
