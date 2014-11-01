@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Custom Fields: Image Resize Parameter\n"
+"POT-Creation-Date: 2014-11-01 16:58+0330\n"
+"PO-Revision-Date: 2014-11-01 16:58+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: acf-image-resize-parameter-v5.php:32
+msgid "Image Resize Parameter"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:65
+msgid "Error! Please enter a higher value"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:102
+msgid "Display \"Resize Image\""
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:103
+msgid "Display \"Resize Image\" to user."
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:108 acf-image-resize-parameter-v5.php:120
+#: acf-image-resize-parameter-v5.php:132 acf-image-resize-parameter-v5.php:178
+#: acf-image-resize-parameter-v5.php:190 acf-image-resize-parameter-v5.php:254
+#: acf-image-resize-parameter-v5.php:265 acf-image-resize-parameter-v5.php:326
+msgid "Yes"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:109 acf-image-resize-parameter-v5.php:121
+#: acf-image-resize-parameter-v5.php:133 acf-image-resize-parameter-v5.php:179
+#: acf-image-resize-parameter-v5.php:191 acf-image-resize-parameter-v5.php:255
+#: acf-image-resize-parameter-v5.php:266 acf-image-resize-parameter-v5.php:327
+msgid "No"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:114 acf-image-resize-parameter-v5.php:250
+msgid "Resize Image"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:115
+msgid "Enable/Disable Resize function."
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:126 acf-image-resize-parameter-v5.php:261
+msgid "Crop Mode"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:127
+msgid ""
+"Enable/Disable Crop Mode. Note: if crop mode disable, height value was "
+"ignored."
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:138 acf-image-resize-parameter-v5.php:271
+msgid "Width"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:139 acf-image-resize-parameter-v5.php:147
+#: acf-image-resize-parameter-v5.php:156 acf-image-resize-parameter-v5.php:165
+msgid "Note: in retina device this value scale up X2."
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:146 acf-image-resize-parameter-v5.php:281
+msgid "Height"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:155 acf-image-resize-parameter-v5.php:291
+msgid "Mobile Width"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:164 acf-image-resize-parameter-v5.php:301
+msgid "Mobile Height"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:172
+msgid "Display \"Show Default Image\""
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:173
+msgid "Display \"Show Default Image\" to user."
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:184 acf-image-resize-parameter-v5.php:322
+msgid "Show Default Image"
+msgstr ""
+
+#: acf-image-resize-parameter-v5.php:185
+msgid "Show default image when source image doesn't exist."
+msgstr ""

@@ -24,15 +24,7 @@ This ACF field type is compatible with:
 
 ## Installation
 
-1. Copy the `acf-image_resize_parameter` folder into your `wp-content/plugins` folder
+1. Copy the `acf-image-resize_parameter` folder into your `wp-content/plugins` folder
 2. Activate the Image Resize Parameter plugin via the plugins admin page
 3. Create a new field via ACF and select the Image Resize Parameter type
 4. Please refer to the description for more info regarding the field type settings
-
-### Changelog
-
-##### 1.0.1
-* bug fix: return value.
-
-##### 1.0.0
-* Initial Release.
