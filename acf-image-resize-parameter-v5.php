@@ -635,30 +635,44 @@ class acf_field_image_resize_parameter extends acf_field {
 	*  @return	$valid
 	*/
 	
-	/*
-	
 	function validate_value( $valid, $value, $field, $input ){
 		
-		// Basic usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = false;
+	    if ($field['required']) {
+	    
+		    if (empty($value['height'])
+		    	 || empty($value['width']) || empty($value['mobile_height']) || empty($value['mobile_width'])) {
+
+		    	$txt = __('The value is empty!! : ','acf-image_resize_parameter');
+		    	$set = 0;
+		    
+				if( empty($value['height'])){
+		    		$txt .= __('height, ','acf-image_resize_parameter');
+		    		$set = 1;
+		    	}
+				if( empty($value['width'])){
+		    		$txt .= __('width, ','acf-image_resize_parameter');
+		    		$set = 1;
+		    	}
+				if( empty($value['mobile_height'])){
+		    		$txt .= __('mobile height, ','acf-image_resize_parameter');
+		    		$set = 1;
+		    	}
+				if( empty($value['mobile_width'])){
+		    		$txt .= __('mobile width, ','acf-image_resize_parameter');
+		    		$set = 1;
+		    	}
+
+		   		if($set){
+		    		$valid = $txt;
+		    	}
+		    }
 		}
-		
-		
-		// Advanced usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = __('The value is too little!','acf-image_resize_parameter'),
-		}
-		
-		
-		// return
-		return $valid;
+
+	    return $valid;
 		
 	}
 	
-	*/
+	
 	
 	
 	/*
